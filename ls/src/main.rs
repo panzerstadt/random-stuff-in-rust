@@ -1,8 +1,8 @@
-mod basic;
+mod basicargs;
 
 use std::path::Path;
 
-use basic::basic_ls;
+use basicargs::basic_ls_with_args;
 
 /**
  * ref: https://linux.die.net/man/1/ls
@@ -24,5 +24,6 @@ broken down:
 - path name
  */
 fn main() {
-    basic_ls(Path::new("."));
+    // basic_ls(Path::new("."));
+    let _ = basic_ls_with_args(Path::new("."));
 }
